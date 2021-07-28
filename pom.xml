@@ -122,14 +122,14 @@
     <sbt.project.name>spark</sbt.project.name>
     <slf4j.version>1.7.16</slf4j.version>
     <log4j.version>1.2.17</log4j.version>
-    <hadoop.version>2.7.4</hadoop.version>
+    <hadoop.version>2.7.7</hadoop.version>
     <protobuf.version>2.5.0</protobuf.version>
     <yarn.version>${hadoop.version}</yarn.version>
     <zookeeper.version>3.4.6</zookeeper.version>
     <curator.version>2.7.1</curator.version>
     <okapi.version>0.4.2</okapi.version>
     <hive.group>org.spark-project.hive</hive.group>
-    <hive.classifier></hive.classifier>
+    <hive.classifier/>
     <!-- Version used in Maven Hive dependency -->
     <hive.version>1.2.1.spark2</hive.version>
     <hive23.version>2.3.5</hive23.version>
@@ -203,8 +203,8 @@
     <arrow.version>0.12.0</arrow.version>
 
     <test.java.home>${java.home}</test.java.home>
-    <test.exclude.tags></test.exclude.tags>
-    <test.include.tags></test.include.tags>
+    <test.exclude.tags/>
+    <test.include.tags/>
 
     <!-- Package to use when relocating shaded classes. -->
     <spark.shade.packageName>org.sparkproject</spark.shade.packageName>
@@ -2593,7 +2593,7 @@
                     </goals>
                   </pluginExecutionFilter>
                   <action>
-                    <ignore></ignore>
+                    <ignore/>
                   </action>
                 </pluginExecution>
                 <pluginExecution>
@@ -2606,7 +2606,7 @@
                     </goals>
                   </pluginExecutionFilter>
                   <action>
-                    <ignore></ignore>
+                    <ignore/>
                   </action>
                 </pluginExecution>
                 <pluginExecution>
@@ -2619,7 +2619,7 @@
                     </goals>
                   </pluginExecutionFilter>
                   <action>
-                    <ignore></ignore>
+                    <ignore/>
                   </action>
                 </pluginExecution>
               </pluginExecutions>
@@ -2801,7 +2801,7 @@
             </goals>
             <configuration>
               <target>
-                <mkdir dir="${project.build.directory}/tmp" />
+                <mkdir dir="${project.build.directory}/tmp"/>
               </target>
             </configuration>
           </execution>
@@ -2917,7 +2917,7 @@
     <profile>
       <id>hadoop-3.2</id>
       <properties>
-        <hadoop.version>3.2.0</hadoop.version>
+        <hadoop.version>2.7.7</hadoop.version>
         <curator.version>2.13.0</curator.version>
         <zookeeper.version>3.4.13</zookeeper.version>
         <hive.group>org.apache.hive</hive.group>
@@ -2927,7 +2927,7 @@
         <!-- Do not need parquet-hadoop-bundle because we already have
           parquet-common, parquet-column and parquet-hadoop -->
         <hive.parquet.scope>provided</hive.parquet.scope>
-        <orc.classifier></orc.classifier>
+        <orc.classifier/>
         <datanucleus-core.version>4.1.17</datanucleus-core.version>
       </properties>
       <dependencies>
